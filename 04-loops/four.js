@@ -1,8 +1,8 @@
-const myobject={
-    js:"javascript",
-    cpp:"c++",
-    rb:"ruby"
-}
+// const myobject={
+//     js:"javascript",
+//     cpp:"c++",
+//     rb:"ruby"
+// }
 
 // for (const key in myobject) {
 //     console.log(key)
@@ -15,7 +15,17 @@ const myobject={
     
 // }
 
-for (const key in myobject) {
-    console.log(`keys are ${key} and values are ${myobject[key]}`)
+// for (const key in myobject) {
+//     console.log(`keys are ${key} and values are ${myobject[key]}`)
+    
+// }
+
+
+const myarray=["js","ss","ssw","www"]
+
+for (const key in myarray) {
+    console.log(myarray[key])
+    
+    
     
 }
