@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ol{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        .li{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <ol class="ol">
+        <li>hello</li>
+        <li class="li">hell0o</li>
+        <li><a class="google" href="https://www.google.com" target="_blank">Linkhellow</a></li>
+    </ol>
+    
+</body>
+<script>
+    //output the event object when click on ol and li
+    // document.querySelector('.ol').addEventListener('click',function(e){
+    //     console.log('ol pressed')
+    // },false)
+
+    // document.querySelector('.li ').addEventListener('click',function(e){
+    //     console.log('li pressed')
+    // },false)
+
+
+    // document.querySelector('.ol').addEventListener('click',function(e){
+    //     console.log('ol pressed')
+    // },true)
+
+    // document.querySelector('.li ').addEventListener('click',function(e){
+    //     console.log('li pressed')
+    // },true)
+
+
+
+    //use stoppropagation to stop event bubbling 
+
+    document.querySelector('.ol').addEventListener('click',function(e){
+        console.log('ol pressed')
+    },false)
+
+    document.querySelector('.li ').addEventListener('click',function(e){
+        console.log('li pressed')
+        e.stopPropagation()
+    },false)
+
+    document.querySelector('.google').addEventListener('click',function(link){
+        link.preventDefault()
+        console.log('google link pressed')
+        
+    })
+    
+
+
+</script>
+</html>
+
+<!-- type,timestamp,defaultprevented,target, toelement , screlemnt,currenttarget, clientx, clienty,tiltex,y,screenx/y -->
+ <!-- altkey,ctrlkey,shiftkey,keycode -->
